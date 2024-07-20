@@ -10,7 +10,7 @@ CXXFLAGS = -Wall -Wextra -std=c++17
 TARGET = cpplox.out
 
 # Source files
-SRCS = src/main.cpp src/memory.cpp src/chunk.cpp src/debug.cpp
+SRCS = src/main.cpp src/memory.cpp src/chunk.cpp src/debug.cpp src/value.cpp
 
 # Object files
 OBJS = $(SRCS:.cpp=.o)
