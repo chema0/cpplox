@@ -20,7 +20,8 @@ static int simple_instruction(const char *name, int offset) {
 static int constant_instruction(const char *name, Chunk *chunk, int offset) {
   uint8_t constant = chunk->get_code()[offset + 1];
   printf("%-16s %4d '", name, constant);
-  print_value(chunk->get_constants().values[constant]);
+  Value *constants = chunk->get_constants().get_values();
+  print_value(constants[constant]);
   printf("'\n");
   return offset + 2;
 }

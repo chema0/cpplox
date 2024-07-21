@@ -5,15 +5,22 @@
 
 using Value = double;
 
-struct ValueArray {
+void print_value(Value value);
+
+class ValueArray {
   int capacity;
   int count;
   Value *values;
-};
 
-void init_value_array(ValueArray *array);
-void write_value_array(ValueArray *array, Value value);
-void free_value_array(ValueArray *array);
-void print_value(Value value);
+public:
+  ValueArray();
+  ~ValueArray();
+
+  void write(Value value);
+
+  int get_capacity();
+  int get_count();
+  Value *get_values();
+};
 
 #endif

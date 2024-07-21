@@ -7,14 +7,12 @@ Chunk::Chunk() {
   capacity = 0;
   code = nullptr;
   lines = nullptr;
-  init_value_array(&constants);
+  constants = ValueArray();
 }
 
 Chunk::~Chunk() {
   FREE_ARRAY(uint8_t, code, capacity);
   FREE_ARRAY(int, lines, capacity);
-  free_value_array(&constants);
-  // init_chunk(chunk);
 }
 
 void Chunk::write(uint8_t byte, int line) {
@@ -31,8 +29,8 @@ void Chunk::write(uint8_t byte, int line) {
 }
 
 int Chunk::add_constant(Value value) {
-  write_value_array(&constants, value);
-  return constants.count - 1;
+  constants.write(value);
+  return constants.get_count();
 }
 
 /* Getters and setters */
