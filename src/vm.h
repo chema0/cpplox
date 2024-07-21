@@ -3,9 +3,9 @@
 
 #include "chunk.h"
 
-typedef struct {
+struct VM {
   Chunk *chunk;
-} VM;
+};
 
 void init_vm();
 void free_vm();

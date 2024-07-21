@@ -3,13 +3,13 @@
 
 #include "common.h"
 
-typedef double Value;
+using Value = double;
 
-typedef struct {
+struct ValueArray {
   int capacity;
   int count;
   Value *values;
-} ValueArray;
+};
 
 void init_value_array(ValueArray *array);
 void write_value_array(ValueArray *array, Value value);

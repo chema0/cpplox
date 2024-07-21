@@ -4,15 +4,15 @@
 #include "common.h"
 #include "value.h"
 
-typedef enum { OP_CONSTANT, OP_RETURN } OpCode;
+enum OpCode { OP_CONSTANT, OP_RETURN };
 
-typedef struct {
+struct Chunk {
   int count;
   int capacity;
   uint8_t *code;
   int *lines;
   ValueArray constants;
-} Chunk;
+};
 
 void init_chunk(Chunk *chunk);
 void free_chunk(Chunk *chunk);
