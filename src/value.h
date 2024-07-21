@@ -1,5 +1,5 @@
-#ifndef cpplox_value_h
-#define cpplox_value_h
+#ifndef VALUE_H
+#define VALUE_H
 
 #include "common.h"
 

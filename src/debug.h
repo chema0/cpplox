@@ -1,5 +1,5 @@
-#ifndef cpplox_debug_h
-#define cpplox_debug_h
+#ifndef DEBUG_H
+#define DEBUG_H
 
 #include "chunk.h"
 

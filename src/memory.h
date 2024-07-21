@@ -1,5 +1,5 @@
-#ifndef cpplox_memory_h
-#define cpplox_memory_h
+#ifndef MEMORY_H
+#define MEMORY_H
 
 #include "common.h"
 

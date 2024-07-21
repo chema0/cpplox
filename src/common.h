@@ -1,5 +1,5 @@
-#ifndef cpplox_common_h
-#define cpplox_common_h
+#ifndef COMMON_H
+#define COMMON_H
 
 #include <stddef.h>
 #include <stdint.h>

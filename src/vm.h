@@ -1,13 +1,14 @@
-#ifndef cpplox_vm_h
-#define cpplox_vm_h
+#ifndef VM_H
+#define VM_H
 
 #include "chunk.h"
 
-struct VM {
+class VM {
   Chunk *chunk;
-};
 
-void init_vm();
-void free_vm();
+public:
+  VM();
+  ~VM();
+};
 
 #endif

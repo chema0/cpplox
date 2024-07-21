@@ -1,5 +1,5 @@
-#ifndef cpplox_chunk_h
-#define cpplox_chunk_h
+#ifndef CHUNK_H
+#define CHUNK_H
 
 #include "common.h"
 #include "value.h"
