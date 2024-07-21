@@ -6,17 +6,25 @@
 
 enum OpCode { OP_CONSTANT, OP_RETURN };
 
-struct Chunk {
+class Chunk {
   int count;
   int capacity;
   uint8_t *code;
   int *lines;
   ValueArray constants;
-};
 
-void init_chunk(Chunk *chunk);
-void free_chunk(Chunk *chunk);
-void write_chunk(Chunk *chunk, uint8_t byte, int line);
-int add_constant(Chunk *chunk, Value value);
+public:
+  Chunk();
+  ~Chunk();
+
+  void write(uint8_t byte, int line);
+  int add_constant(Value value);
+
+  int get_count();
+  int get_capacity();
+  uint8_t *get_code();
+  int *get_lines();
+  ValueArray get_constants();
+};
 
 #endif
